@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:todo/screens/taskpage.dart';
 import 'package:todo/screens/widgets.dart';
 
 class Homepage extends StatefulWidget {
@@ -54,16 +55,23 @@ class _HomepageState extends State<Homepage> {
               Positioned(
                 bottom: 20.0,
                   right: 0.0,
-                child: Container(
-                  width: 60.0,
-                    height: 60.0,
-                  decoration:BoxDecoration(
-                    color: Color(0xFF7349FE),
-                    borderRadius: BorderRadius.circular(20.0),
-                  ) ,
-                  child:Image(
-                    image: AssetImage(
-                      "assets/images/add_icon.png",
+                child: GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Taskpage()
+                    ),
+                    );
+                  },
+                  child: Container(
+                    width: 60.0,
+                      height: 60.0,
+                    decoration:BoxDecoration(
+                      color: Color(0xFF7349FE),
+                      borderRadius: BorderRadius.circular(20.0),
+                    ) ,
+                    child:Image(
+                      image: AssetImage(
+                        "assets/images/add_icon.png",
+                      ),
                     ),
                   ),
                 ),
