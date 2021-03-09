@@ -11,7 +11,7 @@ class _TaskpageState extends State<Taskpage> {
     return Scaffold(
       body: Container(
         child: Center(
-          child: Text("Wlcome to TaskPage"),
+          child: Text("Welcome to TaskPage"),
         ),
 
       ),
